@@ -23,7 +23,7 @@ const projects = [
   description:
     "Website elegant pentru un restaurant, construit pentru prezentarea meniului și rezervări.",
   image: "/images/mora.jpg",
-  url: "mora-restaurant-demo.vercel.app",
+  url: "https://mora-restaurant-demo.vercel.app",
 },
 ];
 
