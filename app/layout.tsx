@@ -13,24 +13,60 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DAZIVO — Website-uri moderne pentru afaceri",
+  metadataBase: new URL("https://dazivo.vercel.app"),
+
+  title: {
+    default: "DAZIVO — Website-uri care vând.",
+    template: "%s | DAZIVO",
+  },
+
   description:
-    "DAZIVO construiește website-uri moderne, rapide și profesioniste pentru afaceri și branduri.",
+    "DAZIVO construiește website-uri moderne, rapide și memorabile pentru afaceri care vor să arate profesionist și să atragă mai mulți clienți online.",
+
   keywords: [
     "web design",
     "website",
-    "site web",
+    "creare site",
+    "site prezentare",
     "web development",
+    "magazin online",
+    "landing page",
+    "redesign website",
     "DAZIVO",
   ],
-  authors: [{ name: "DAZIVO" }],
+
+  authors: [
+    {
+      name: "DAZIVO",
+    },
+  ],
+
   creator: "DAZIVO",
+
   openGraph: {
-    title: "DAZIVO — Website-uri moderne pentru afaceri",
-    description:
-      "Construim website-uri moderne pentru afaceri care vor să arate profesionist online.",
     type: "website",
     locale: "ro_RO",
+    url: "https://dazivo.vercel.app",
+    siteName: "DAZIVO",
+    title: "DAZIVO — Website-uri care vând.",
+    description:
+      "Website-uri moderne pentru afaceri care vor să arate profesionist și să transforme vizitatorii în clienți.",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "DAZIVO — Website-uri care vând.",
+    description:
+      "Construim website-uri moderne pentru afaceri care vor să crească online.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  icons: {
+    icon: "/favicon.ico",
   },
 };
 
@@ -42,7 +78,7 @@ export default function RootLayout({
   return (
     <html lang="ro">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-full antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
