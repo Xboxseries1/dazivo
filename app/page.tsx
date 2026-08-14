@@ -6,6 +6,7 @@ const projects = [
     category: "Service Auto",
     description:
       "Website modern pentru un service auto, construit pentru prezentarea serviciilor și generarea programărilor.",
+    image: "/images/autofix.jpg",
     url: "https://service-auto-demo-six.vercel.app/",
   },
   {
@@ -13,6 +14,7 @@ const projects = [
     category: "Barber Shop",
     description:
       "Website premium pentru un barber shop, cu servicii, galerie, recenzii și sistem de programare.",
+    image: "/images/noir-barber.jpg",
     url: "https://noir-barber-peach.vercel.app/",
   },
 ];
@@ -280,48 +282,64 @@ export default function Home() {
 
           <div className="grid gap-6 md:grid-cols-2">
 
-            {projects.map((project) => (
+{projects.map((project) => (
+  <a
+    key={project.title}
+    href={project.url}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group overflow-hidden rounded-[2rem] border border-white/10 bg-[#151515] transition duration-300 hover:-translate-y-1 hover:border-orange-500/40"
+  >
 
-              <a
-                key={project.title}
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group overflow-hidden rounded-[2rem] border border-white/10 bg-[#151515] transition hover:-translate-y-1 hover:border-orange-500/40"
-              >
+    {/* PREVIEW SITE */}
+    <div className="relative aspect-[16/10] overflow-hidden bg-black">
 
-                <div className="flex aspect-[16/10] items-end bg-gradient-to-br from-orange-500/20 via-[#181818] to-black p-8">
+      <img
+        src={project.image}
+        alt={`Preview ${project.title}`}
+        className="h-full w-full object-cover object-top transition duration-700 group-hover:scale-[1.03]"
+      />
 
-                  <div>
+      <div className="absolute inset-0 bg-black/0 transition group-hover:bg-black/10" />
 
-                    <p className="text-sm font-bold uppercase tracking-[0.25em] text-orange-500">
-                      {project.category}
-                    </p>
+      <div className="absolute left-5 top-5 rounded-full border border-white/10 bg-black/70 px-4 py-2 text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+        {project.category}
+      </div>
 
-                    <h3 className="mt-3 text-4xl font-black">
-                      {project.title}
-                    </h3>
-
-                  </div>
-
-                </div>
+    </div>
 
 
-                <div className="p-8">
+    {/* INFORMAȚII */}
+    <div className="p-8">
 
-                  <p className="leading-7 text-white/45">
-                    {project.description}
-                  </p>
+      <div className="flex items-start justify-between gap-5">
 
-                  <p className="mt-6 font-bold text-orange-500">
-                    Vezi proiectul →
-                  </p>
+        <div>
 
-                </div>
+         <h3 className="text-3xl font-black">
+            {project.title}
+          </h3>
 
-              </a>
+          <p className="mt-4 max-w-md leading-7 text-white/45">
+            {project.description}
+          </p>
 
-            ))}
+        </div>
+
+        <span className="hidden text-2xl text-orange-500 transition-transform duration-300 group-hover:translate-x-1 sm:block">
+          ↗
+        </span>
+
+      </div>
+
+      <div className="mt-7 font-bold text-orange-500">
+        Vezi proiectul →
+      </div>
+
+    </div>
+
+  </a>
+))}
 
           </div>
 
