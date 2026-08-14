@@ -17,6 +17,14 @@ const projects = [
     image: "/images/noir-barber.jpg",
     url: "https://noir-barber-peach.vercel.app/",
   },
+  {
+  title: "MORA",
+  category: "Restaurant & Wine Bar",
+  description:
+    "Website elegant pentru un restaurant, construit pentru prezentarea meniului și rezervări.",
+  image: "/images/mora.jpg",
+  url: "mora-restaurant-demo.vercel.app",
+},
 ];
 
 const services = [
