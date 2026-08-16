@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import SeoSchema from "./seo-schema";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,25 +14,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://dazivo.vercel.app"),
+  metadataBase: new URL("https://dazivoweb.com"),
 
   title: {
-    default: "DAZIVO — Website-uri care vând.",
+    default: "DAZIVO | Web Design & Creare Site-uri",
     template: "%s | DAZIVO",
   },
 
   description:
-    "DAZIVO construiește website-uri moderne, rapide și memorabile pentru afaceri care vor să arate profesionist și să atragă mai mulți clienți online.",
+    "DAZIVO creează website-uri moderne, rapide și personalizate pentru afaceri din România. Site-uri de prezentare, landing pages, magazine online și redesign.",
 
   keywords: [
     "web design",
-    "website",
     "creare site",
-    "site prezentare",
+    "creare website",
+    "site de prezentare",
     "web development",
     "magazin online",
     "landing page",
     "redesign website",
+    "web design România",
+    "creare site România",
     "DAZIVO",
   ],
 
@@ -42,27 +45,49 @@ export const metadata: Metadata = {
   ],
 
   creator: "DAZIVO",
+  publisher: "DAZIVO",
 
+  alternates: {
+    canonical: "https://dazivoweb.com/",
+  },
+
+  
   openGraph: {
-    type: "website",
-    locale: "ro_RO",
-    url: "https://dazivo.vercel.app",
-    siteName: "DAZIVO",
-    title: "DAZIVO — Website-uri care vând.",
-    description:
-      "Website-uri moderne pentru afaceri care vor să arate profesionist și să transforme vizitatorii în clienți.",
-  },
+  type: "website",
+  locale: "ro_RO",
+  url: "https://dazivoweb.com/",
+  siteName: "DAZIVO",
+  title: "DAZIVO | Web Design & Creare Site-uri",
+  description:
+    "Website-uri moderne, rapide și personalizate pentru afaceri care vor să crească online.",
+  images: [
+    {
+      url: "/dazivo-og-image.png",
+      width: 1200,
+      height: 630,
+      alt: "DAZIVO — Web Design & Creare Site-uri",
+    },
+  ],
+},
 
-  twitter: {
-    card: "summary_large_image",
-    title: "DAZIVO — Website-uri care vând.",
-    description:
-      "Construim website-uri moderne pentru afaceri care vor să crească online.",
-  },
+twitter: {
+  card: "summary_large_image",
+  title: "DAZIVO | Web Design & Creare Site-uri",
+  description:
+    "Creăm website-uri moderne și rapide pentru afaceri din România.",
+  images: ["/dazivo-og-image.png"],
+},
 
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 
   icons: {
@@ -81,6 +106,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <SeoSchema />
       </body>
     </html>
   );

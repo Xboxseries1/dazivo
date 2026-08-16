@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dazivo.vercel.app/sitemap.xml
+Sitemap: https://dazivoweb.com/sitemap.xml

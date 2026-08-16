@@ -89,7 +89,7 @@ export default function Home() {
 
       <header className="fixed left-0 right-0 top-0 z-50 px-4 pt-4">
         <div className="mx-auto max-w-6xl">
-          <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-[#090909]/75 px-4 py-3 shadow-2xl shadow-black/20 backdrop-blur-sm sm:px-5">
+          <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-[#090909]/75 px-4 py-3 shadow-2xl shadow-black/20 backdrop-blur-2xl sm:px-5">
             <a
               href="#home"
               onClick={closeMenu}
@@ -144,28 +144,44 @@ export default function Home() {
               <span>→</span>
             </a>
 
-{/* MOBILE MENU BUTTON */}
+            {/* MOBILE MENU BUTTON */}
 
             <button
               type="button"
-              onClick={() => setMenuOpen((prev) => !prev)}
-              className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-xl border border-white/10 bg-white/[0.05] md:hidden"
-              aria-label="Deschide meniul"
+              aria-label={menuOpen ? "Închide meniul" : "Deschide meniul"}
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] transition duration-300 hover:bg-white/[0.08] md:hidden"
             >
-              <span className="block h-0.5 w-5 bg-white" />
-              <span className="block h-0.5 w-5 bg-white" />
-              <span className="block h-0.5 w-5 bg-white" />
-            </button>
+              <span className="relative block h-5 w-5">
+                <span
+                  className={`absolute left-0 top-[5px] block h-[2px] w-5 rounded-full bg-white transition duration-300 ${
+                    menuOpen ? "translate-y-[5px] rotate-45" : ""
+                  }`}
+                />
 
+                <span
+                  className={`absolute left-0 top-[10px] block h-[2px] w-5 rounded-full bg-white transition duration-300 ${
+                    menuOpen ? "opacity-0" : ""
+                  }`}
+                />
+
+                <span
+                  className={`absolute left-0 top-[15px] block h-[2px] w-5 rounded-full bg-white transition duration-300 ${
+                    menuOpen ? "-translate-y-[5px] -rotate-45" : ""
+                  }`}
+                />
+              </span>
+            </button>
           </div>
 
           {/* MOBILE MENU */}
 
           <div
-            className={`relative z-[90] overflow-hidden md:hidden ${
-menuOpen
-  ? "mt-2 max-h-[500px] opacity-100"
-  : "pointer-events-none max-h-0 opacity-0"
+            className={`overflow-hidden transition-all duration-300 md:hidden ${
+              menuOpen
+                ? "mt-2 max-h-[500px] opacity-100"
+                : "max-h-0 opacity-0"
             }`}
           >
             <nav className="rounded-2xl border border-white/10 bg-[#101010]/95 p-3 shadow-2xl shadow-black/30 backdrop-blur-sm">
@@ -828,7 +844,7 @@ menuOpen
 
             {/* CATEGORY */}
 
-            <div className="absolute left-5 top-5 rounded-full border border-white/10 bg-black/70 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-sm">
+            <div className="absolute left-5 top-5 rounded-full border border-white/10 bg-black/70 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-md">
               {project.category}
             </div>
 
@@ -842,7 +858,7 @@ menuOpen
 
             {/* OPEN BUTTON */}
 
-            <div className="absolute bottom-5 right-5 flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-black/70 text-lg text-white backdrop-blur-sm transition duration-300 group-hover:rotate-12 group-hover:bg-orange-500 group-hover:text-black">
+            <div className="absolute bottom-5 right-5 flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-black/70 text-lg text-white backdrop-blur-md transition duration-300 group-hover:rotate-12 group-hover:bg-orange-500 group-hover:text-black">
               ↗
             </div>
 

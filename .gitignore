@@ -3,3 +3,13 @@ node_modules/
 .env
 .env.local
 .DS_Store
+.vercel
+.env*
+
+# Local backup/temp files
+*.backup
+*.broken
+*.save
+*.before-performance
+tsconfig.tsbuildinfo
+*.backup-*
