@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 const projects = [
@@ -88,7 +89,7 @@ export default function Home() {
 
       <header className="fixed left-0 right-0 top-0 z-50 px-4 pt-4">
         <div className="mx-auto max-w-6xl">
-          <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-[#090909]/75 px-4 py-3 shadow-2xl shadow-black/20 backdrop-blur-2xl sm:px-5">
+          <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-[#090909]/75 px-4 py-3 shadow-2xl shadow-black/20 backdrop-blur-sm sm:px-5">
             <a
               href="#home"
               onClick={closeMenu}
@@ -143,47 +144,31 @@ export default function Home() {
               <span>→</span>
             </a>
 
-            {/* MOBILE MENU BUTTON */}
+{/* MOBILE MENU BUTTON */}
 
             <button
               type="button"
-              aria-label={menuOpen ? "Închide meniul" : "Deschide meniul"}
-              aria-expanded={menuOpen}
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] transition duration-300 hover:bg-white/[0.08] md:hidden"
+              onClick={() => setMenuOpen((prev) => !prev)}
+              className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-xl border border-white/10 bg-white/[0.05] md:hidden"
+              aria-label="Deschide meniul"
             >
-              <span className="relative block h-5 w-5">
-                <span
-                  className={`absolute left-0 top-[5px] block h-[2px] w-5 rounded-full bg-white transition duration-300 ${
-                    menuOpen ? "translate-y-[5px] rotate-45" : ""
-                  }`}
-                />
-
-                <span
-                  className={`absolute left-0 top-[10px] block h-[2px] w-5 rounded-full bg-white transition duration-300 ${
-                    menuOpen ? "opacity-0" : ""
-                  }`}
-                />
-
-                <span
-                  className={`absolute left-0 top-[15px] block h-[2px] w-5 rounded-full bg-white transition duration-300 ${
-                    menuOpen ? "-translate-y-[5px] -rotate-45" : ""
-                  }`}
-                />
-              </span>
+              <span className="block h-0.5 w-5 bg-white" />
+              <span className="block h-0.5 w-5 bg-white" />
+              <span className="block h-0.5 w-5 bg-white" />
             </button>
+
           </div>
 
           {/* MOBILE MENU */}
 
           <div
-            className={`overflow-hidden transition-all duration-300 md:hidden ${
-              menuOpen
-                ? "mt-2 max-h-[500px] opacity-100"
-                : "max-h-0 opacity-0"
+            className={`relative z-[90] overflow-hidden md:hidden ${
+menuOpen
+  ? "mt-2 max-h-[500px] opacity-100"
+  : "pointer-events-none max-h-0 opacity-0"
             }`}
           >
-            <nav className="rounded-2xl border border-white/10 bg-[#101010]/95 p-3 shadow-2xl shadow-black/30 backdrop-blur-2xl">
+            <nav className="rounded-2xl border border-white/10 bg-[#101010]/95 p-3 shadow-2xl shadow-black/30 backdrop-blur-sm">
               <a
                 href="#servicii"
                 onClick={closeMenu}
@@ -251,9 +236,9 @@ export default function Home() {
             }}
           />
 
-          <div className="absolute left-[45%] top-[35%] h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-orange-500/10 blur-[150px]" />
+          <div className="absolute left-[45%] top-[35%] h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-orange-500/10 blur-[60px]" />
 
-          <div className="absolute right-[-150px] top-[15%] h-[450px] w-[450px] rounded-full bg-orange-500/[0.06] blur-[120px]" />
+          <div className="absolute right-[-150px] top-[15%] h-[450px] w-[450px] rounded-full bg-orange-500/[0.06] blur-[50px]" />
         </div>
 
         <div className="relative mx-auto w-full max-w-7xl px-6 pb-20 pt-32 lg:px-10 lg:pt-40">
@@ -300,9 +285,9 @@ export default function Home() {
 
             <div className="hidden lg:block">
               <div className="relative mx-auto max-w-md">
-                <div className="absolute -inset-8 rounded-[3rem] bg-orange-500/[0.07] blur-3xl" />
+                <div className="absolute -inset-8 rounded-[3rem] bg-orange-500/[0.07] blur-xl" />
 
-                <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#101010]/90 p-7 shadow-2xl backdrop-blur-xl">
+                <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#101010]/90 p-7 shadow-2xl backdrop-blur-sm">
                   <div className="flex items-center justify-between border-b border-white/10 pb-6">
                     <div>
                       <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/35">
@@ -828,11 +813,13 @@ export default function Home() {
 
           <div className="relative aspect-[16/10] overflow-hidden bg-black">
 
-            <img
-              src={project.image}
-              alt={`Preview ${project.title}`}
-              className="h-full w-full object-cover object-top transition duration-700 group-hover:scale-[1.035]"
-            />
+            <Image
+  src={project.image}
+  alt={`Preview ${project.title}`}
+  fill
+  sizes="(max-width: 768px) 100vw, 50vw"
+  className="object-cover object-top transition duration-700 group-hover:scale-[1.035]"
+/>
 
             {/* DARK OVERLAY */}
 
@@ -841,7 +828,7 @@ export default function Home() {
 
             {/* CATEGORY */}
 
-            <div className="absolute left-5 top-5 rounded-full border border-white/10 bg-black/70 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-md">
+            <div className="absolute left-5 top-5 rounded-full border border-white/10 bg-black/70 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-sm">
               {project.category}
             </div>
 
@@ -855,7 +842,7 @@ export default function Home() {
 
             {/* OPEN BUTTON */}
 
-            <div className="absolute bottom-5 right-5 flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-black/70 text-lg text-white backdrop-blur-md transition duration-300 group-hover:rotate-12 group-hover:bg-orange-500 group-hover:text-black">
+            <div className="absolute bottom-5 right-5 flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-black/70 text-lg text-white backdrop-blur-sm transition duration-300 group-hover:rotate-12 group-hover:bg-orange-500 group-hover:text-black">
               ↗
             </div>
 
