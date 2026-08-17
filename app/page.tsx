@@ -107,28 +107,28 @@ export default function Home() {
             <nav className="hidden items-center gap-1 md:flex">
               <a
                 href="#servicii"
-                className="rounded-xl px-4 py-2 text-sm font-medium text-white/50 transition duration-300 hover:bg-white/[0.05] hover:text-white"
+                className="rounded-xl px-4 py-2 text-sm font-medium text-white/60 transition duration-300 hover:bg-white/[0.05] hover:text-white"
               >
                 Servicii
               </a>
 
               <a
                 href="#portofoliu"
-                className="rounded-xl px-4 py-2 text-sm font-medium text-white/50 transition duration-300 hover:bg-white/[0.05] hover:text-white"
+                className="rounded-xl px-4 py-2 text-sm font-medium text-white/60 transition duration-300 hover:bg-white/[0.05] hover:text-white"
               >
                 Portofoliu
               </a>
 
               <a
                 href="#proces"
-                className="rounded-xl px-4 py-2 text-sm font-medium text-white/50 transition duration-300 hover:bg-white/[0.05] hover:text-white"
+                className="rounded-xl px-4 py-2 text-sm font-medium text-white/60 transition duration-300 hover:bg-white/[0.05] hover:text-white"
               >
                 Proces
               </a>
 
               <a
                 href="#contact"
-                className="rounded-xl px-4 py-2 text-sm font-medium text-white/50 transition duration-300 hover:bg-white/[0.05] hover:text-white"
+                className="rounded-xl px-4 py-2 text-sm font-medium text-white/60 transition duration-300 hover:bg-white/[0.05] hover:text-white"
               >
                 Contact
               </a>
@@ -273,11 +273,40 @@ export default function Home() {
                 <span className="text-orange-500">VÂND.</span>
               </h1>
 
-              <p className="mt-10 max-w-2xl text-lg leading-8 text-white/50 sm:text-xl">
+              <p className="mt-10 max-w-2xl text-lg leading-8 text-white/60 sm:text-xl">
                 Construim website-uri moderne pentru afaceri care vor să arate
                 profesionist, să fie găsite online și să transforme vizitatorii
                 în clienți.
               </p>
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+  <a
+    href="#contact"
+    className="group inline-flex items-center gap-3 rounded-xl bg-orange-500 px-5 py-3 text-sm font-bold text-black transition duration-300 hover:-translate-y-0.5 hover:bg-orange-400 hover:shadow-xl hover:shadow-orange-500/20"
+  >
+    Cere o ofertă
+    <span className="transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </a>
+
+  <a
+    href="#portofoliu"
+    className="group inline-flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-bold text-white/80 transition duration-300 hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.07] hover:text-white"
+  >
+    Vezi proiectele
+    <span className="text-white/40 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-white/70">
+      ↗
+    </span>
+  </a>
+</div>
+
+<div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-[10px] font-bold uppercase tracking-[0.18em] text-white/50">
+  <span>03+ Proiecte demonstrative</span>
+  <span className="hidden h-1 w-1 rounded-full bg-orange-500 sm:block" />
+  <span>Design personalizat</span>
+  <span className="hidden h-1 w-1 rounded-full bg-orange-500 sm:block" />
+  <span>România</span>
+</div>
 
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
@@ -306,11 +335,11 @@ export default function Home() {
                 <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#101010]/90 p-7 shadow-2xl backdrop-blur-sm">
                   <div className="flex items-center justify-between border-b border-white/10 pb-6">
                     <div>
-                      <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/35">
+                      <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/60">
                         DAZIVO
                       </p>
 
-                      <p className="mt-2 text-sm text-white/50">
+                      <p className="mt-2 text-sm text-white/60">
                         Digital experiences
                       </p>
                     </div>
@@ -341,21 +370,21 @@ export default function Home() {
                   <div className="grid grid-cols-3 gap-3">
                     <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
                       <p className="text-lg font-black">01</p>
-                      <p className="mt-2 text-xs leading-5 text-white/40">
+                      <p className="mt-2 text-xs leading-5 text-white/60">
                         Design premium
                       </p>
                     </div>
 
                     <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
                       <p className="text-lg font-black">02</p>
-                      <p className="mt-2 text-xs leading-5 text-white/40">
+                      <p className="mt-2 text-xs leading-5 text-white/60">
                         Mobile first
                       </p>
                     </div>
 
                     <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
                       <p className="text-lg font-black">03</p>
-                      <p className="mt-2 text-xs leading-5 text-white/40">
+                      <p className="mt-2 text-xs leading-5 text-white/60">
                         Lansare rapidă
                       </p>
                     </div>
@@ -381,7 +410,7 @@ export default function Home() {
           03<span className="text-orange-500">+</span>
         </p>
 
-        <p className="mt-3 text-xs font-bold uppercase tracking-[0.2em] text-white/35">
+        <p className="mt-3 text-xs font-bold uppercase tracking-[0.2em] text-white/60">
           Proiecte demonstrative
         </p>
       </div>
@@ -391,7 +420,7 @@ export default function Home() {
           100<span className="text-orange-500">%</span>
         </p>
 
-        <p className="mt-3 text-xs font-bold uppercase tracking-[0.2em] text-white/35">
+        <p className="mt-3 text-xs font-bold uppercase tracking-[0.2em] text-white/60">
           Design personalizat
         </p>
       </div>
@@ -401,7 +430,7 @@ export default function Home() {
           01<span className="text-orange-500">:01</span>
         </p>
 
-        <p className="mt-3 text-xs font-bold uppercase tracking-[0.2em] text-white/35">
+        <p className="mt-3 text-xs font-bold uppercase tracking-[0.2em] text-white/60">
           Comunicare directă
         </p>
       </div>
@@ -411,7 +440,7 @@ export default function Home() {
           24<span className="text-orange-500">/7</span>
         </p>
 
-        <p className="mt-3 text-xs font-bold uppercase tracking-[0.2em] text-white/35">
+        <p className="mt-3 text-xs font-bold uppercase tracking-[0.2em]60">
           Website-uri online
         </p>
       </div>
@@ -434,7 +463,7 @@ export default function Home() {
 
         <h2 className="max-w-4xl text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
           Prima impresie a unei afaceri
-          <span className="text-white/35">
+          <span className="text-white/60">
             {" "}începe online.
           </span>
         </h2>
@@ -443,7 +472,7 @@ export default function Home() {
 
       <div>
 
-        <p className="max-w-xl text-lg leading-8 text-white/45">
+        <p className="max-w-xl text-lg leading-8 text-white/60">
           Un website bun nu trebuie doar să arate bine. Trebuie să transmită
           încredere, să explice clar ce oferi și să facă următorul pas cât mai
           simplu pentru client.
@@ -473,7 +502,7 @@ export default function Home() {
           Arată profesionist
         </h3>
 
-        <p className="mt-3 leading-7 text-white/40">
+        <p className="mt-3 leading-7 text-white/60">
           Design modern, adaptat identității și domeniului afacerii tale.
         </p>
 
@@ -496,7 +525,7 @@ export default function Home() {
           Se mișcă rapid
         </h3>
 
-        <p className="mt-3 leading-7 text-white/40">
+        <p className="mt-3 leading-7 text-white/60">
           Experiență fluidă și optimizată pentru desktop, tabletă și telefon.
         </p>
 
@@ -519,7 +548,7 @@ export default function Home() {
           Convinge clienții
         </h3>
 
-        <p className="mt-3 leading-7 text-white/40">
+        <p className="mt-3 leading-7 text-white/60">
           Structură clară și CTA-uri gândite pentru ca vizitatorul să știe ce
           are de făcut.
         </p>
@@ -550,7 +579,7 @@ export default function Home() {
               </h2>
             </div>
 
-            <p className="max-w-md text-lg leading-8 text-white/40">
+            <p className="max-w-md text-lg leading-8 text-white/60">
               De la prima idee până la lansare, construim experiențe digitale
               potrivite pentru obiectivele afacerii tale.
             </p>
@@ -582,7 +611,7 @@ export default function Home() {
                       {service.title}
                     </h3>
 
-                    <p className="mt-4 max-w-xl text-base leading-7 text-white/40">
+                    <p className="mt-4 max-w-xl text-base leading-7 text-white/60">
                       {service.text}
                     </p>
                   </div>
@@ -597,7 +626,7 @@ export default function Home() {
             <div>
               <p className="font-bold">Nu știi exact de ce ai nevoie?</p>
 
-              <p className="mt-1 text-sm text-white/40">
+              <p className="mt-1 text-sm text-white/60">
                 Spune-ne ce afacere ai și îți recomandăm soluția potrivită.
               </p>
             </div>
@@ -637,12 +666,12 @@ export default function Home() {
         <h2 className="max-w-xl text-5xl font-black leading-[1.02] tracking-tight sm:text-6xl">
           Nu doar un site.
           <br />
-          <span className="text-white/35">
+          <span className="text-white/60">
             O imagine pentru afacerea ta.
           </span>
         </h2>
 
-        <p className="mt-8 max-w-lg text-lg leading-8 text-white/40">
+        <p className="mt-8 max-w-lg text-lg leading-8 text-white/60">
           Construim website-uri care îți reprezintă afacerea, explică rapid
           ceea ce oferi și îi fac clientului următorul pas cât mai simplu.
         </p>
@@ -682,7 +711,7 @@ export default function Home() {
             Design personalizat
           </h3>
 
-          <p className="mt-3 leading-7 text-white/40">
+          <p className="mt-3 leading-7 text-white/60">
             Nu pornim de la un design generic. Construim experiența în jurul
             afacerii și imaginii brandului tău.
           </p>
@@ -708,7 +737,7 @@ export default function Home() {
             Mobile first
           </h3>
 
-          <p className="mt-3 leading-7 text-white/40">
+          <p className="mt-3 leading-7 text-white/60">
             Website-ul este gândit să arate bine și să fie ușor de folosit
             indiferent de dispozitiv.
           </p>
@@ -734,7 +763,7 @@ export default function Home() {
             Rapid și modern
           </h3>
 
-          <p className="mt-3 leading-7 text-white/40">
+          <p className="mt-3 leading-7 text-white/60">
             Punem accent pe performanță, navigare simplă și o experiență
             plăcută pentru vizitator.
           </p>
@@ -760,7 +789,7 @@ export default function Home() {
             Comunicare directă
           </h3>
 
-          <p className="mt-3 leading-7 text-white/40">
+          <p className="mt-3 leading-7 text-white/60">
             Vorbești direct cu noi, fără procese complicate și fără să fii
             plimbat între departamente.
           </p>
@@ -802,7 +831,7 @@ export default function Home() {
 
       </div>
 
-      <p className="max-w-md text-lg leading-8 text-white/40">
+      <p className="max-w-md text-lg leading-8 text-white/60">
         Exemple de website-uri create pentru diferite tipuri de afaceri.
         Fiecare proiect este construit cu accent pe design, claritate și
         experiența utilizatorului.
@@ -834,13 +863,12 @@ export default function Home() {
   alt={`Preview ${project.title}`}
   fill
   sizes="(max-width: 768px) 100vw, 50vw"
-  className="object-cover object-top transition duration-700 group-hover:scale-[1.035]"
+  className="object-cover object-top transition duration-700 ease-out group-hover:scale-[1.045]"
 />
 
             {/* DARK OVERLAY */}
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-70 transition duration-500 group-hover:opacity-90" />
-
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-transparent opacity-70 transition duration-500 group-hover:opacity-90" />
 
             {/* CATEGORY */}
 
@@ -851,7 +879,7 @@ export default function Home() {
 
             {/* NUMBER */}
 
-            <div className="absolute right-5 top-5 text-sm font-black text-white/40">
+            <div className="absolute right-5 top-5 text-sm font-black text-white/60">
               0{index + 1}
             </div>
 
@@ -877,7 +905,7 @@ export default function Home() {
                   {project.title}
                 </h3>
 
-                <p className="mt-4 max-w-md leading-7 text-white/45">
+                <p className="mt-4 max-w-md leading-7 text-white/60">
                   {project.description}
                 </p>
 
@@ -894,9 +922,12 @@ export default function Home() {
                 Vezi proiectul
               </span>
 
-              <span className="text-sm text-white/25 transition duration-300 group-hover:translate-x-1 group-hover:text-white/60">
-                Deschide ↗
-              </span>
+            <span className="inline-flex items-center gap-2 text-sm font-semibold text-white/35 transition-all duration-300 group-hover:gap-3 group-hover:text-orange-400">
+  Deschide
+  <span className="transition-transform duration-300 group-hover:translate-x-1">
+    ↗
+  </span>
+</span>
 
             </div>
 
@@ -921,7 +952,7 @@ export default function Home() {
             Ai nevoie de un website pentru afacerea ta?
           </p>
 
-          <p className="mt-2 text-sm leading-6 text-white/40">
+          <p className="mt-2 text-sm leading-6 text-white/60">
             Putem construi ceva similar, dar adaptat complet brandului tău.
           </p>
 
@@ -967,7 +998,7 @@ export default function Home() {
                 Eficient.
               </h2>
 
-              <p className="mt-8 max-w-md text-lg leading-8 text-white/40">
+              <p className="mt-8 max-w-md text-lg leading-8 text-white/60">
                 Fără procese complicate. Discutăm, construim, lansăm și
                 rămânem disponibili atunci când ai nevoie.
               </p>
@@ -989,7 +1020,7 @@ export default function Home() {
                         {title}
                       </h3>
 
-                      <p className="mt-3 leading-7 text-white/40">{text}</p>
+                      <p className="mt-3 leading-7 text-white/60">{text}</p>
                     </div>
                   </div>
                 </div>
@@ -1108,11 +1139,43 @@ export default function Home() {
 
       {/* FOOTER */}
 
-      <footer className="border-t border-white/10 py-10">
-        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 text-sm text-white/35 md:flex-row lg:px-10">
-          <p>© 2026 DAZIVO. Toate drepturile rezervate.</p>
+      <footer className="border-t border-white/10 bg-[#090909] py-10">
+        <div className="mx-auto flex max-w-7xl flex-col gap-6 px-6 lg:px-10">
 
-          <p>Web Design & Development</p>
+          <div className="flex flex-col justify-between gap-5 md:flex-row md:items-center">
+
+            <a
+              href="#home"
+              className="group inline-flex w-fit items-center gap-2"
+            >
+              <span className="text-lg font-black tracking-[0.18em]">
+                DAZIVO
+              </span>
+
+              <span className="h-2 w-2 rounded-full bg-orange-500 shadow-[0_0_12px_rgba(249,115,22,0.8)] transition-transform duration-300 group-hover:scale-125" />
+            </a>
+
+            <p className="text-sm font-medium text-white/40">
+              Web Design & Development
+            </p>
+
+          </div>
+
+          <div className="h-px bg-white/[0.06]" />
+
+          <div className="flex flex-col justify-between gap-3 text-xs text-white/30 sm:flex-row">
+
+            <p>© 2026 DAZIVO. Toate drepturile rezervate.</p>
+
+            <a
+              href="#home"
+              className="w-fit transition-colors duration-300 hover:text-white/70"
+            >
+              Înapoi sus ↑
+            </a>
+
+          </div>
+
         </div>
       </footer>
     </main>
