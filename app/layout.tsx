@@ -22,21 +22,21 @@ export const metadata: Metadata = {
   },
 
   description:
-    "DAZIVO creează website-uri moderne, rapide și personalizate pentru afaceri din România. Site-uri de prezentare, landing pages, magazine online și redesign.",
-
+  "DAZIVO creează website-uri moderne, rapide și personalizate pentru afaceri din România. Web design, site-uri de prezentare, landing pages, magazine online și redesign.",
   keywords: [
-    "web design",
-    "creare site",
-    "creare website",
-    "site de prezentare",
-    "web development",
-    "magazin online",
-    "landing page",
-    "redesign website",
-    "web design România",
-    "creare site România",
-    "DAZIVO",
-  ],
+  "web design România",
+  "creare site România",
+  "creare website România",
+  "web development România",
+  "site de prezentare",
+  "creare site de prezentare",
+  "landing page",
+  "magazin online",
+  "web design",
+  "dezvoltare website",
+  "redesign website",
+  "DAZIVO",
+],
 
   authors: [
     {
