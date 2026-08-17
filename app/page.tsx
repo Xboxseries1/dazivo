@@ -29,7 +29,59 @@ const projects = [
     url: "https://mora-restaurant-demo.vercel.app/",
   },
 ];
+const ArrowRight = () => (
+  <svg
+    aria-hidden="true"
+    viewBox="0 0 20 20"
+    className="h-4 w-4"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M4 10h11M10 5l5 5-5 5"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
 
+const ArrowUpRight = () => (
+  <svg
+    aria-hidden="true"
+    viewBox="0 0 20 20"
+    className="h-4 w-4"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M5 15 15 5M7 5h8v8"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const ArrowUp = () => (
+  <svg
+    aria-hidden="true"
+    viewBox="0 0 20 20"
+    className="h-4 w-4"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M10 16V4M5 9l5-5 5 5"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
 const services = [
   {
     number: "01",
@@ -140,8 +192,8 @@ export default function Home() {
               href="#contact"
               className="hidden rounded-xl bg-orange-500 px-5 py-2.5 text-sm font-bold text-black transition duration-300 hover:-translate-y-0.5 hover:bg-orange-400 hover:shadow-lg hover:shadow-orange-500/20 md:flex md:items-center md:gap-2"
             >
-              Cere o ofertă
-              <span>→</span>
+           Cere o ofertă
+<ArrowRight />
             </a>
 
             {/* MOBILE MENU BUTTON */}
@@ -229,7 +281,7 @@ export default function Home() {
                 className="flex items-center justify-center rounded-xl bg-orange-500 px-4 py-4 text-sm font-bold text-black transition hover:bg-orange-400"
               >
                 Cere o ofertă
-                <span className="ml-2">→</span>
+                <span className="ml-2"><ArrowRight /></span>
               </a>
             </nav>
           </div>
@@ -285,7 +337,7 @@ export default function Home() {
   >
     Cere o ofertă
     <span className="transition-transform duration-300 group-hover:translate-x-1">
-      →
+      <ArrowRight />
     </span>
   </a>
 
@@ -295,7 +347,7 @@ export default function Home() {
   >
     Vezi proiectele
     <span className="text-white/40 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-white/70">
-      ↗
+      <ArrowUpRight />
     </span>
   </a>
 </div>
@@ -315,7 +367,7 @@ export default function Home() {
                 >
                   Vezi portofoliul
                   <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1">
-                    →
+                    <ArrowRight />
                   </span>
                 </a>
 
@@ -494,7 +546,7 @@ export default function Home() {
           </span>
 
           <span className="text-xl text-white/20 transition group-hover:text-orange-500">
-            ↗
+            <ArrowUpRight />
           </span>
         </div>
 
@@ -517,7 +569,7 @@ export default function Home() {
           </span>
 
           <span className="text-xl text-white/20 transition group-hover:text-orange-500">
-            ↗
+            <ArrowUpRight />
           </span>
         </div>
 
@@ -540,7 +592,7 @@ export default function Home() {
           </span>
 
           <span className="text-xl text-white/20 transition group-hover:text-orange-500">
-            ↗
+<ArrowUpRight />
           </span>
         </div>
 
@@ -602,7 +654,7 @@ export default function Home() {
                     </span>
 
                     <span className="text-2xl text-white/20 transition duration-300 group-hover:translate-x-1 group-hover:text-orange-500">
-                      ↗
+                      <ArrowUpRight />
                     </span>
                   </div>
 
@@ -637,7 +689,7 @@ export default function Home() {
             >
               Vorbim despre proiect
               <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">
-                →
+                <ArrowRight />
               </span>
             </a>
           </div>
@@ -682,7 +734,7 @@ export default function Home() {
         >
           Hai să discutăm
           <span className="ml-2">
-            →
+            <ArrowRight />
           </span>
         </a>
 
@@ -728,7 +780,7 @@ export default function Home() {
             </span>
 
             <span className="text-xl text-white/20">
-              ↗
+              <ArrowUpRight />
             </span>
 
           </div>
@@ -887,7 +939,7 @@ export default function Home() {
             {/* OPEN BUTTON */}
 
             <div className="absolute bottom-5 right-5 flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-black/70 text-lg text-white backdrop-blur-md transition duration-300 group-hover:rotate-12 group-hover:bg-orange-500 group-hover:text-black">
-              ↗
+              <ArrowUpRight />
             </div>
 
           </div>
@@ -919,13 +971,14 @@ export default function Home() {
             <div className="mt-8 flex items-center justify-between border-t border-white/10 pt-6">
 
               <span className="text-sm font-bold text-orange-500">
-                Vezi proiectul
+    Vezi proiectul
+<ArrowRight />
               </span>
 
             <span className="inline-flex items-center gap-2 text-sm font-semibold text-white/35 transition-all duration-300 group-hover:gap-3 group-hover:text-orange-400">
   Deschide
   <span className="transition-transform duration-300 group-hover:translate-x-1">
-    ↗
+    <ArrowUpRight />
   </span>
 </span>
 
@@ -965,7 +1018,7 @@ export default function Home() {
           Cere o ofertă
 
           <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">
-            →
+            <ArrowRight />
           </span>
 
         </a>
@@ -1087,7 +1140,7 @@ export default function Home() {
             Vorbește cu noi pe WhatsApp
 
             <span className="ml-3 text-orange-500 transition-transform duration-300 group-hover:translate-x-1">
-              →
+              <ArrowRight />
             </span>
           </a>
 
@@ -1171,7 +1224,7 @@ export default function Home() {
               href="#home"
               className="w-fit transition-colors duration-300 hover:text-white/70"
             >
-              Înapoi sus ↑
+              Înapoi sus <ArrowUp />
             </a>
 
           </div>
