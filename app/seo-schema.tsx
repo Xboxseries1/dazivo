@@ -3,8 +3,11 @@ export default function SeoSchema() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
 
+    "@id": "https://dazivoweb.com/#business",
+
     name: "DAZIVO",
     url: "https://dazivoweb.com/",
+
     description:
       "DAZIVO creează website-uri moderne, rapide și personalizate pentru afaceri din România.",
 
@@ -18,11 +21,13 @@ export default function SeoSchema() {
 
     serviceType: [
       "Web Design",
+      "Web Development",
       "Creare Site-uri",
       "Site-uri de prezentare",
       "Landing Pages",
       "Magazine Online",
       "Redesign Website",
+      "SEO",
     ],
 
     knowsAbout: [
@@ -33,8 +38,6 @@ export default function SeoSchema() {
       "Landing Pages",
       "E-commerce",
     ],
-
-    sameAs: [],
   };
 
   return (
